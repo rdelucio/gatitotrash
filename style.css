@@ -1,32 +1,51 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f4f8;
+    background-color: #f0f8ff;
 }
 
 #casa {
     position: relative;
-    width: 90%;
-    height: 90vh;
-    background-color: #e0e0e0;
-    display: flex;
-    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+    border: 2px solid #333;
+    display: grid;
+    grid-template-areas:
+        "sala cocina"
+        "jardin dormitorio";
     gap: 10px;
+    background-color: #fff;
 }
 
 .habitacion {
-    flex: 1 1 45%;
-    height: 45%;
-    border: 2px solid #ccc;
-    position: relative;
-    text-align: center;
-    font-weight:
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #999;
+    font-size: 20px;
+    color: #333;
+    background-color: #e0e0e0;
+}
+
+#sala { grid-area: sala; }
+#cocina { grid-area: cocina; }
+#jardin { grid-area: jardin; }
+#dormitorio { grid-area: dormitorio; }
+
+#gato {
+    position: absolute;
+    font-size: 40px;
+    left: 50px;
+    top: 50px;
+    transition: transform 0.2s ease;
+}
+
+.objeto {
+    position: absolute;
+    font-size: 30px;
+    display: none; /* Ocultos inicialmente */
+}
